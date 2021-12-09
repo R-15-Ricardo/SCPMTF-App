@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:scpmtf_app" 
+             x:Class="scpmtf_app.MainPage">
+
+    <StackLayout VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" BackgroundColor="#8f4b46">
+        <Frame Padding="24" CornerRadius="0" HasShadow="False">
+            <Frame.Background>
+                <LinearGradientBrush StartPoint="0,1"
+                             EndPoint="0,0">
+                    <GradientStop Color="#8f4b46"
+                          Offset="0.1"/>
+                    <GradientStop Color="Black"
+                          Offset="1.0"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <Image Source="{local:ImageResource scpmtf_app.EmbRes.Images.FoundationEmblem.png}"/>
+                <Label Text="SCP Foundation" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontFamily=""/>
+                <Label Text="Guia de campo para Descamentos Móviles" HorizontalTextAlignment="Center" TextColor="White" FontSize="20"/>
+            </StackLayout>
+        </Frame>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Center">
+            <Button VerticalOptions="CenterAndExpand" Text="ACCEDER" BackgroundColor="White" FontSize="35" Padding="35" CornerRadius="25" Clicked="accessBtn_Clicked"></Button>
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>

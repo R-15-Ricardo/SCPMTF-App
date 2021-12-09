@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:scpmtf_app"
+             x:Class="scpmtf_app.Pages.SearchPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="MainContent"  VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" BackgroundColor="#8f4b46">
+            <Frame Padding="15" CornerRadius="0" HasShadow="False">
+                <Frame.Background>
+                    <LinearGradientBrush StartPoint="0,1"
+                             EndPoint="0,0">
+                        <GradientStop Color="#8f4b46"
+                          Offset="0.1"/>
+                        <GradientStop Color="Black"
+                          Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Image Source="{local:ImageResource scpmtf_app.EmbRes.Images.FoundationEmblem.png}" HeightRequest="64" Margin="0,0,0,0" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="Fundación SCP" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="White" FontSize="34" FontAttributes="Bold" Grid.Row="0" Grid.Column="1"/>
+                </Grid>
+            </Frame>
+            <Label Text="Sistema de busqueda de anomalías" HorizontalTextAlignment="Center" TextColor="White" FontSize="25" Margin="0,50,0,0" Padding="25,0,25,0"></Label>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="0,75,0,0">
+                <Frame BackgroundColor="#26FFFFFF" CornerRadius="18">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                        <Label Text="Buscar SCP -" VerticalTextAlignment="Center" FontSize="25" FontAttributes="Bold" TextColor="White"></Label>
+                        <Entry x:Name="itemNumberEntry" Placeholder="#Objeto" FontSize="25" PlaceholderColor="LightGray" TextColor="White"></Entry>
+                    </StackLayout>
+                </Frame>
+                <Button Text="Buscar" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,50,0,0" BackgroundColor="White" FontSize="25" Padding="50,15,50,15" CornerRadius="25" Clicked="searchSendBtn_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
